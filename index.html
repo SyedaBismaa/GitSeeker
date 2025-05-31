@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col items-center justify-center transition-colors duration-300">
+    <!-- Header -->
+    <header class="w-full max-w-4xl mx-auto px-4 py-6">
+        <h1 class="text-3xl font-bold text-gray-800 dark:text-white text-center">GitHub User Search</h1>
+        <p class="text-gray-600 dark:text-gray-300 text-center mt-2">Enter a GitHub username to view user details</p>
+    </header>
+
+    <!-- Search Section -->
+    <main class="w-full max-w-4xl mx-auto px-4 py-8">
+        <div class="flex justify-center mb-8">
+            <div class="relative w-full max-w-lg">
+                <input 
+                    type="text" 
+                    placeholder="Enter GitHub username" 
+                    class="w-full p-4 pr-12 text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                >
+                <button 
+                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                >
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <!-- User Profile Card -->
+        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+            <div class="flex items-center space-x-6">
+                <img 
+                    src="https://via.placeholder.com/100" 
+                    alt="User Avatar" 
+                    class="w-24 h-24 rounded-full border-2 border-gray-200 dark:border-gray-700 object-cover"
+                >
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Username</h2>
+                    <p class="text-gray-600 dark:text-gray-300">Full Name</p>
+                </div>
+            </div>
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Repositories:</span> 0</p>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Followers:</span> 0</p>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Following:</span> 0</p>
+                </div>
+                <div>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Location:</span> Not specified</p>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Email:</span> Not specified</p>
+                    <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Joined:</span> Not specified</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="text-gray-600 dark:text-gray-300"><span class="font-semibold">Bio:</span> No bio available</p>
+                <a 
+                    href="#" 
+                    class="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                    View GitHub Profile
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-4 py-6 text-center">
+        <p class="text-gray-600 dark:text-gray-400">Built with ❤ using Tailwind CSS</p>
+        <label class="inline-flex items-center mt-4 cursor-pointer">
+            <input type="checkbox" class="sr-only" onchange="document.documentElement.classList.toggle('dark')">
+            <span class="text-gray-600 dark:text-gray-400 mr-2">Toggle Dark Mode</span>
+            <div class="w-10 h-6 bg-gray-300 dark:bg-gray-700 rounded-full p-1">
+                <div class="w-4 h-4 bg-white dark:bg-blue-600 rounded-full transform transition-transform duration-200 dark:translate-x-4"></div>
+            </div>
+        </label>
+    </footer>
+</body>
+</html>
